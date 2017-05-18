@@ -71,11 +71,16 @@ public class Principal {
 		            System.err.println("Opção inválida!");
 		            continue;
 		        }
+				f.add(value);
 				System.out.println("Valor ["+value+"] adicionado na lista!!!");
 				break;
 			case 4:
-				f.remove();
-				System.out.println("Elemento removido da lista!!!");
+				if (f.empty()) {
+					System.out.println("Lista vazia!!!");
+				} else {
+					f.remove();
+					System.out.println("Elemento removido da lista!!!");
+				}
 				break;
 			case 5:
 				f.show();
@@ -87,7 +92,7 @@ public class Principal {
 				System.out.println("Opção inválida!");
 				break;
 			}
-			TimeUnit.SECONDS.sleep(2);
+			TimeUnit.SECONDS.sleep(1);
 		} while (opcaoint != 0);
 	}
 	
